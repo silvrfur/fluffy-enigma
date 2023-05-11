@@ -30,7 +30,7 @@ function generateComputerChoice(){
     computerChoiceDisplay.innerHTML=computerChoice
 }
 
-function getResult(){
+/*function getResult(){
     if(computerChoice===userChoice){
         result='It is a draw'
     }
@@ -53,5 +53,48 @@ function getResult(){
         result='Your lost!'
     }
     resultDisplay.innerHTML=result
+}*/
+function getResult(){
+    if(computerChoice===userChoice){
+        result='It is a draw'
+    }
+    else if(computerChoice==='rock' && userChoice==='paper'){
+        result='Your win!'
+    }
+    else if(computerChoice==='rock' && userChoice==='scissor'){
+        result='Your lost!'
+    }
+    else if(computerChoice==='paper' && userChoice==='scissor'){
+        result='Your win!'
+    }
+    else if(computerChoice==='paper' && userChoice==='rock'){
+        result='Your lost!'
+    }
+    else if(computerChoice==='scissor' && userChoice==='rock'){
+        result='Your win!'
+    }
+    else{
+        result='Your lost!'
+    }
+    resultDisplay.innerHTML=result
 }
 
+/*
+//Takes less no of syntax.
+function getResult(){    
+     result='Your lost!';
+     const res= ["paper", "rock", "scissor","paper"];
+     if(userChoice===computerChoice){
+        result='It is a draw';
+      }
+     else{
+         for(i=1;i<(res.length);i++) { 
+              if(computerChoice===res[i] && userChoice===res[i-1])
+              {
+                result='Your win!';
+                break;
+              }
+         }
+      }
+      resultDisplay.innerHTML=result
+}*/
